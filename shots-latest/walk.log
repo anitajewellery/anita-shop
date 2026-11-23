@@ -1,0 +1,57 @@
+== install ==
+Performing Streamed Install
+Success
+Starting: Intent { cmp=com.anitajewellery.shop/.MainActivity }
+== wait for the catalogue (live feed) ==
+catalogue loaded after ~4s
+shot: 01-home
+== home, scrolled ==
+shot: 02-home-scrolled
+== shop tab + search ==
+tap text 'SHOP' at 426 2251
+shot: 03-shop
+tap field 0 at 540 355
+shot: 04-search
+== open a product ==
+tap text 'Kullu khokhor' at 716 1296
+shot: 05-product
+== book: first-booking details sheet ==
+tap text 'Book on WhatsApp' at 660 2237
+shot: 06-details-sheet
+tap field 0 at 540 1368
+tap field 1 at 540 1600
+NOT FOUND (field): 2
+visible texts: EARRINGS | Kullu khokhor | ₹2,600 | Kullu khokhor with gold plating | Home delivery across the Manipur valley | Book on WhatsApp
+shot: 07-details-filled
+NOT FOUND (text): Save & continue to WhatsApp
+visible texts: EARRINGS | Kullu khokhor | ₹2,600 | Kullu khokhor with gold plating | Home delivery across the Manipur valley | Book on WhatsApp
+shot: 08-after-book-tap
+== back to the app; saved + details tabs ==
+Starting: Intent { cmp=com.anitajewellery.shop/.MainActivity }
+Warning: Activity not started, intent has been delivered to currently running top-most instance.
+NOT FOUND (text): SAVED
+visible texts: EARRINGS | Kullu khokhor | ₹2,600 | Kullu khokhor with gold plating | Home delivery across the Manipur valley | Book on WhatsApp
+shot: 09-saved
+NOT FOUND (text): DETAILS
+visible texts: EARRINGS | Kullu khokhor | ₹2,600 | Kullu khokhor with gold plating | Home delivery across the Manipur valley | Book on WhatsApp
+shot: 10-details-tab
+== walk done ==
+total 14864
+drwxr-xr-x 2 runner runner    4096 Nov 23 16:42 .
+drwxr-xr-x 6 runner runner    4096 Nov 23 16:40 ..
+-rw-r--r-- 1 runner runner 1888400 Nov 23 16:40 01-home.png
+-rw-r--r-- 1 runner runner 2221065 Nov 23 16:40 02-home-scrolled.png
+-rw-r--r-- 1 runner runner 1569836 Nov 23 16:41 03-shop.png
+-rw-r--r-- 1 runner runner 1568741 Nov 23 16:41 04-search.png
+-rw-r--r-- 1 runner runner 1390278 Nov 23 16:41 05-product.png
+-rw-r--r-- 1 runner runner  902778 Nov 23 16:41 06-details-sheet.png
+-rw-r--r-- 1 runner runner 1390557 Nov 23 16:42 07-details-filled.png
+-rw-r--r-- 1 runner runner 1390557 Nov 23 16:42 08-after-book-tap.png
+-rw-r--r-- 1 runner runner 1390557 Nov 23 16:42 09-saved.png
+-rw-r--r-- 1 runner runner 1390557 Nov 23 16:42 10-details-tab.png
+-rw-r--r-- 1 runner runner    7544 Nov 23 16:42 dump-details.xml
+-rw-r--r-- 1 runner runner   22569 Nov 23 16:40 dump-home.xml
+-rw-r--r-- 1 runner runner    7545 Nov 23 16:41 dump-product.xml
+-rw-r--r-- 1 runner runner   25434 Nov 23 16:41 dump-search.xml
+-rw-r--r-- 1 runner runner    8589 Nov 23 16:41 dump-sheet.xml
+-rw-r--r-- 1 runner runner    1575 Nov 23 16:42 walk.log
