@@ -75,6 +75,26 @@ PY
   sleep 2
 }
 
+# Tap the node whose content-desc matches $1 (icon buttons like the heart).
+tap_desc() {
+  dump_ui
+  C=$(python3 - "$1" <<'PY'
+import re, sys
+want = sys.argv[1]
+try:
+    xml = open('/tmp/ui.xml', encoding='utf-8', errors='ignore').read()
+except OSError:
+    sys.exit(0)
+for m in re.finditer(r'content-desc="([^"]*)"[^>]*bounds="\[(\d+),(\d+)\]\[(\d+),(\d+)\]"', xml):
+    if m.group(1) == want:
+        print((int(m.group(2)) + int(m.group(4))) // 2, (int(m.group(3)) + int(m.group(5))) // 2)
+        break
+PY
+)
+  if [ -n "$C" ]; then echo "tap desc '$1' at $C"; adb shell input tap $C; else echo "NOT FOUND (desc): $1"; visible_texts; fi
+  sleep 2
+}
+
 type() { adb shell input text "$1"; sleep 1; }
 hide_keyboard() { adb shell input keyevent 111; sleep 1; }
 
@@ -143,30 +163,47 @@ sleep 3
 save_dump product
 shot 05-product
 
+echo "== favourite this piece (heart) =="
+tap_desc "Favourite"
+shot 06-favourited
+
 echo "== book: first-booking details sheet =="
 tap_text "Book on WhatsApp"
 sleep 3
 save_dump sheet
-shot 06-details-sheet
-tap_field 0; type "Emulator%sTest"; hide_keyboard; sleep 1
-tap_field 1; type 9876543210; hide_keyboard; sleep 1
-tap_field 2; type "Imphal%sTest%sAddress"; hide_keyboard; sleep 1
-shot 07-details-filled
+shot 07-details-sheet
+# Fill without ESC: ESC can reach the sheet dialog and dismiss it.
+# BACK hides only the keyboard while it is open.
+tap_field 0; type "Emulator%sTest"
+adb shell input keyevent 4; sleep 1
+tap_field 1; type 9876543210
+adb shell input keyevent 4; sleep 1
+tap_field 2; type "Imphal%sTest%sAddress"
+adb shell input keyevent 4; sleep 2
+save_dump filled
+shot 08-details-filled
+if has_text "Your details"; then echo "sheet still open after filling - good"; else echo "SHEET CLOSED EARLY"; fi
 tap_text "Save & continue to WhatsApp"
 sleep 5
-shot 08-after-book-tap
+shot 09-after-book-tap
 
-echo "== back to the app; saved + details tabs =="
-adb shell am start -n $PKG/.MainActivity
-sleep 4
-dismiss_system_dialogs
+echo "== return to the app: leave WhatsApp/browser, leave product page =="
+adb shell input keyevent 4; sleep 2
+if has_text "Book on WhatsApp"; then adb shell input keyevent 4; sleep 2; fi
+save_dump back-home
+shot 10-back
+
+echo "== saved tab (the favourited piece should be listed) =="
 tap_text "SAVED"
 sleep 2
-shot 09-saved
+save_dump saved
+shot 11-saved
+
+echo "== details tab (saved details should be pre-filled) =="
 tap_text "DETAILS"
 sleep 2
 save_dump details
-shot 10-details-tab
+shot 12-details-tab
 
 echo "== walk done =="
 ls -la "$SHOTS"
