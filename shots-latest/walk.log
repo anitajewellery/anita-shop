@@ -3,65 +3,21 @@ Performing Streamed Install
 Success
 Starting: Intent { cmp=com.anitajewellery.shop/.MainActivity }
 == wait for the catalogue (live feed) ==
-catalogue loaded after ~4s
+waiting for catalogue... 1
+waiting for catalogue... 2
+waiting for catalogue... 3
+waiting for catalogue... 4
+waiting for catalogue... 5
+waiting for catalogue... 6
+waiting for catalogue... 7
+waiting for catalogue... 8
+waiting for catalogue... 9
+waiting for catalogue... 10
+waiting for catalogue... 11
+waiting for catalogue... 12
+waiting for catalogue... 13
+waiting for catalogue... 14
+waiting for catalogue... 15
 shot: 01-home
-== home, scrolled ==
-shot: 02-home-scrolled
-== shop tab + search ==
-tap text 'SHOP' at 426 2251
-shot: 03-shop
-tap field 0 at 540 355
-shot: 04-search
-== open a product ==
-tap text 'Kullu khokhor' at 716 1296
-shot: 05-product
-== favourite this piece (heart) ==
-tap desc 'Favourite' at 992 216
-shot: 06-favourited
-== book: first-booking details sheet ==
-tap text 'Book on WhatsApp' at 660 2237
-shot: 07-details-sheet
-tap field 0 at 540 1368
-tap field 1 at 540 1600
-tap field 2 at 540 1848
-shot: 08-details-filled
-sheet still open after filling - good
-tap text 'Save & continue to WhatsApp' at 540 2061
-shot: 09-after-book-tap
-== return to the app (relaunch; WhatsApp/browser may be on top) ==
-Starting: Intent { cmp=com.anitajewellery.shop/.MainActivity }
-Warning: Activity not started, its current task has been brought to the front
-shot: 10-back
-== saved tab (the favourited piece should be listed) ==
-NOT FOUND (text): SAVED
-visible texts: EARRINGS | Kullu khokhor | ₹2,600 | Kullu khokhor with gold plating | Home delivery across the Manipur valley | Book on WhatsApp
-shot: 11-saved
-== details tab (saved details should be pre-filled) ==
-NOT FOUND (text): DETAILS
-visible texts: EARRINGS | Kullu khokhor | ₹2,600 | Kullu khokhor with gold plating | Home delivery across the Manipur valley | Book on WhatsApp
-shot: 12-details-tab
-== walk done ==
-total 15928
-drwxr-xr-x 2 runner runner    4096 Nov 23 17:28 .
-drwxr-xr-x 6 runner runner    4096 Nov 23 17:26 ..
--rw-r--r-- 1 runner runner 1889762 Nov 23 17:26 01-home.png
--rw-r--r-- 1 runner runner 2221698 Nov 23 17:26 02-home-scrolled.png
--rw-r--r-- 1 runner runner 1570891 Nov 23 17:26 03-shop.png
--rw-r--r-- 1 runner runner 1569782 Nov 23 17:27 04-search.png
--rw-r--r-- 1 runner runner 1391510 Nov 23 17:27 05-product.png
--rw-r--r-- 1 runner runner 1389664 Nov 23 17:27 06-favourited.png
--rw-r--r-- 1 runner runner  901702 Nov 23 17:27 07-details-sheet.png
--rw-r--r-- 1 runner runner  921912 Nov 23 17:27 08-details-filled.png
--rw-r--r-- 1 runner runner  128844 Nov 23 17:28 09-after-book-tap.png
--rw-r--r-- 1 runner runner 1390073 Nov 23 17:28 10-back.png
--rw-r--r-- 1 runner runner 1390073 Nov 23 17:28 11-saved.png
--rw-r--r-- 1 runner runner 1390073 Nov 23 17:28 12-details-tab.png
--rw-r--r-- 1 runner runner    7545 Nov 23 17:28 dump-back-home.xml
--rw-r--r-- 1 runner runner    7545 Nov 23 17:28 dump-details.xml
--rw-r--r-- 1 runner runner    8924 Nov 23 17:27 dump-filled.xml
--rw-r--r-- 1 runner runner   22569 Nov 23 17:26 dump-home.xml
--rw-r--r-- 1 runner runner    7545 Nov 23 17:27 dump-product.xml
--rw-r--r-- 1 runner runner    7545 Nov 23 17:28 dump-saved.xml
--rw-r--r-- 1 runner runner   25434 Nov 23 17:27 dump-search.xml
--rw-r--r-- 1 runner runner    8589 Nov 23 17:27 dump-sheet.xml
--rw-r--r-- 1 runner runner    1545 Nov 23 17:28 walk.log
+WALK ABORTED: catalogue never loaded
+visible texts: Allow Anita Jewellery to send you notifications? | Allow | Don’t allow
