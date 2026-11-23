@@ -125,6 +125,9 @@ dismiss_system_dialogs() {
 
 echo "== install =="
 adb install -r "$GITHUB_WORKSPACE/app.apk"
+# v1.1 asks for the notification permission on first open (Android 13+);
+# grant it up front so the walk is not blocked by the system dialog.
+adb shell pm grant $PKG android.permission.POST_NOTIFICATIONS 2>/dev/null || true
 adb shell am start -n $PKG/.MainActivity
 sleep 6
 dismiss_system_dialogs
