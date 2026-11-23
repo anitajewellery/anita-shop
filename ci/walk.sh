@@ -192,6 +192,9 @@ echo "== return to the app (relaunch; WhatsApp/browser may be on top) =="
 adb shell am start -n $PKG/.MainActivity
 sleep 4
 dismiss_system_dialogs
+# The relaunched task may still show the product page (no dock there):
+# one BACK returns to the tabs - only when the product page is really showing.
+if has_text "Book on WhatsApp"; then echo "on product page - BACK to tabs"; adb shell input keyevent 4; sleep 2; fi
 save_dump back-home
 shot 10-back
 
