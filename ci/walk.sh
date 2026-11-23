@@ -132,6 +132,7 @@ dismiss_system_dialogs
 echo "== wait for the catalogue (live feed) =="
 LOADED=0
 for i in $(seq 1 15); do
+  dismiss_system_dialogs
   if has_text "The Collection"; then echo "catalogue loaded after ~$((i*4))s"; LOADED=1; break; fi
   echo "waiting for catalogue... $i"
   sleep 4
@@ -187,9 +188,10 @@ tap_text "Save & continue to WhatsApp"
 sleep 5
 shot 09-after-book-tap
 
-echo "== return to the app: leave WhatsApp/browser, leave product page =="
-adb shell input keyevent 4; sleep 2
-if has_text "Book on WhatsApp"; then adb shell input keyevent 4; sleep 2; fi
+echo "== return to the app (relaunch; WhatsApp/browser may be on top) =="
+adb shell am start -n $PKG/.MainActivity
+sleep 4
+dismiss_system_dialogs
 save_dump back-home
 shot 10-back
 
