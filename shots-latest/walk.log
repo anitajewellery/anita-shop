@@ -2,38 +2,73 @@
 Performing Streamed Install
 Success
 Starting: Intent { cmp=com.anitajewellery.shop/.MainActivity }
-system ANR dialog present - tapping Wait (streak 1)
 == wait for the catalogue (live feed) ==
-system ANR dialog present - tapping Wait (streak 1)
-waiting for catalogue... 1
-system ANR dialog present - tapping Wait (streak 1)
-waiting for catalogue... 2
-system ANR dialog present - tapping Wait (streak 1)
-waiting for catalogue... 3
-system ANR dialog present - tapping Wait (streak 1)
-waiting for catalogue... 4
-system ANR dialog present - tapping Wait (streak 1)
-waiting for catalogue... 5
-system ANR dialog present - tapping Wait (streak 1)
-waiting for catalogue... 6
-system ANR dialog present - tapping Wait (streak 1)
-waiting for catalogue... 7
-system ANR dialog present - tapping Wait (streak 1)
-waiting for catalogue... 8
-system ANR dialog present - tapping Wait (streak 1)
-waiting for catalogue... 9
-system ANR dialog present - tapping Wait (streak 1)
-waiting for catalogue... 10
-system ANR dialog present - tapping Wait (streak 1)
-waiting for catalogue... 11
-system ANR dialog present - tapping Wait (streak 1)
-waiting for catalogue... 12
-system ANR dialog present - tapping Wait (streak 1)
-waiting for catalogue... 13
-system ANR dialog present - tapping Wait (streak 1)
-waiting for catalogue... 14
-system ANR dialog present - tapping Wait (streak 1)
-waiting for catalogue... 15
+catalogue loaded after ~4s
 shot: 01-home
-WALK ABORTED: catalogue never loaded
-visible texts: Pixel Launcher isn't responding | Close app | Wait
+== home, scrolled ==
+shot: 02-home-scrolled
+== shop tab + search ==
+tap text 'SHOP' at 426 2251
+shot: 03-shop
+tap field 0 at 540 355
+shot: 04-search
+== open a product ==
+tap text 'Kullu khokhor' at 716 1296
+shot: 05-product
+== favourite this piece (heart) ==
+tap desc 'Favourite' at 992 216
+shot: 06-favourited
+== book: first-booking details sheet ==
+tap text 'Book on WhatsApp' at 660 2237
+shot: 07-details-sheet
+tap field 0 at 540 1368
+tap field 1 at 540 1600
+tap field 2 at 540 1848
+shot: 08-details-filled
+sheet still open after filling - good
+tap text 'Save & continue to WhatsApp' at 540 2061
+shot: 09-after-book-tap
+== return to the app (relaunch; WhatsApp/browser may be on top) ==
+Starting: Intent { cmp=com.anitajewellery.shop/.MainActivity }
+Warning: Activity not started, its current task has been brought to the front
+on product page - BACK to tabs
+shot: 10-back
+== saved tab (the favourited piece should be listed) ==
+NOT FOUND (text): SAVED
+visible texts: Welcome to Chrome | Add account to device | Use without an account | By continuing, you agree to the Terms of Service. To help improve the app, Chrome sends usage and crash data to Google. Manage
+shot: 11-saved
+== details tab (saved details should be pre-filled) ==
+NOT FOUND (text): DETAILS
+visible texts: Welcome to Chrome | Add account to device | Use without an account | By continuing, you agree to the Terms of Service. To help improve the app, Chrome sends usage and crash data to Google. Manage
+shot: 12-details-tab
+== notification tap: launch with a product code extra (what an FCM tap delivers) ==
+Starting: Intent { cmp=com.anitajewellery.shop/.MainActivity (has extras) }
+shot: 13-notif-tap-product
+NOTIF TAP OK - product page opened from the code extra
+== walk done ==
+total 13316
+drwxr-xr-x 2 runner runner    4096 Nov 24 06:08 .
+drwxr-xr-x 6 runner runner    4096 Nov 24 06:06 ..
+-rw-r--r-- 1 runner runner 1888928 Nov 24 06:06 01-home.png
+-rw-r--r-- 1 runner runner 2202040 Nov 24 06:06 02-home-scrolled.png
+-rw-r--r-- 1 runner runner 1570671 Nov 24 06:07 03-shop.png
+-rw-r--r-- 1 runner runner 1570027 Nov 24 06:07 04-search.png
+-rw-r--r-- 1 runner runner 1391704 Nov 24 06:07 05-product.png
+-rw-r--r-- 1 runner runner 1389853 Nov 24 06:07 06-favourited.png
+-rw-r--r-- 1 runner runner  901776 Nov 24 06:07 07-details-sheet.png
+-rw-r--r-- 1 runner runner  922221 Nov 24 06:08 08-details-filled.png
+-rw-r--r-- 1 runner runner  128951 Nov 24 06:08 09-after-book-tap.png
+-rw-r--r-- 1 runner runner  128951 Nov 24 06:08 10-back.png
+-rw-r--r-- 1 runner runner  128951 Nov 24 06:08 11-saved.png
+-rw-r--r-- 1 runner runner  128951 Nov 24 06:08 12-details-tab.png
+-rw-r--r-- 1 runner runner 1119731 Nov 24 06:08 13-notif-tap-product.png
+-rw-r--r-- 1 runner runner    7194 Nov 24 06:08 dump-back-home.xml
+-rw-r--r-- 1 runner runner    7194 Nov 24 06:08 dump-details.xml
+-rw-r--r-- 1 runner runner    8924 Nov 24 06:08 dump-filled.xml
+-rw-r--r-- 1 runner runner   22569 Nov 24 06:06 dump-home.xml
+-rw-r--r-- 1 runner runner    7560 Nov 24 06:08 dump-notif-tap.xml
+-rw-r--r-- 1 runner runner    7545 Nov 24 06:07 dump-product.xml
+-rw-r--r-- 1 runner runner    7194 Nov 24 06:08 dump-saved.xml
+-rw-r--r-- 1 runner runner   25434 Nov 24 06:07 dump-search.xml
+-rw-r--r-- 1 runner runner    8589 Nov 24 06:07 dump-sheet.xml
+-rw-r--r-- 1 runner runner    1948 Nov 24 06:09 walk.log
