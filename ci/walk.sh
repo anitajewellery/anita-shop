@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Scripted walk of the Anita Jewellery CUSTOMER app on the emulator.
+# v1.7 checks: card names wrap to 2 lines (03-shop, Kiyang card), back-press step 06b, details-tab save rule (12-details-tab)
 # No login in this app - the walk covers the full customer journey:
 # home -> shop/search -> product -> first-booking details sheet -> saved/details tabs -> notification-tap simulation (v1.3) + gallery build (v1.4).
 # Every tap is located fresh from a uiautomator dump; steps log what they see.
