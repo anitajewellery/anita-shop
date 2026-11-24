@@ -163,8 +163,9 @@ shot 04-search
 # Round-1 polish check: nonsense search -> the new empty state, then clear via the x button.
 type "zzqq"
 shot 04b-empty-search
-tap 950 355 "clear search"
+tap_desc "Clear search"
 sleep 1
+if has_text "Kullu khokhor"; then echo "CLEAR OK - grid restored"; else echo "CLEAR MISS - grid not restored"; visible_texts; fi
 
 echo "== open a product =="
 tap_text "Kullu khokhor" contains
