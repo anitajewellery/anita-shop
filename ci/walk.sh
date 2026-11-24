@@ -1,3 +1,4 @@
+# walk run: v1.9 frosted top strip + name verdict
 #!/usr/bin/env bash
 # Scripted walk of the Anita Jewellery CUSTOMER app on the emulator.
 # v1.7 checks: card names wrap to 2 lines (03-shop, Kiyang card), back-press step 06b, details-tab save rule (12-details-tab)
