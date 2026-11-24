@@ -213,5 +213,14 @@ sleep 2
 save_dump details
 shot 12-details-tab
 
+echo "== notification tap: launch with a product code extra (what an FCM tap delivers) =="
+adb shell am force-stop $PKG
+sleep 1
+adb shell am start -n $PKG/.MainActivity --es code AJ-710091
+sleep 5
+save_dump notif-tap
+shot 13-notif-tap-product
+if has_text "Book on WhatsApp"; then echo "NOTIF TAP OK - product page opened from the code extra"; else echo "NOTIF TAP MISS - product page not shown"; visible_texts; fi
+
 echo "== walk done =="
 ls -la "$SHOTS"
