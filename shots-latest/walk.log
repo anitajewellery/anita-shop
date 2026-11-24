@@ -42,27 +42,27 @@ NOT FOUND (text): DETAILS
 visible texts: Welcome to Chrome | Add account to device | Use without an account | By continuing, you agree to the Terms of Service. To help improve the app, Chrome sends usage and crash data to Google. Manage
 shot: 12-details-tab
 == walk done ==
-total 12308
-drwxr-xr-x 2 runner runner    4096 Nov 23 22:19 .
-drwxr-xr-x 6 runner runner    4096 Nov 23 22:17 ..
--rw-r--r-- 1 runner runner 1889186 Nov 23 22:17 01-home.png
--rw-r--r-- 1 runner runner 2299520 Nov 23 22:17 02-home-scrolled.png
--rw-r--r-- 1 runner runner 1570413 Nov 23 22:17 03-shop.png
--rw-r--r-- 1 runner runner 1569931 Nov 23 22:18 04-search.png
--rw-r--r-- 1 runner runner 1391629 Nov 23 22:18 05-product.png
--rw-r--r-- 1 runner runner 1389747 Nov 23 22:18 06-favourited.png
--rw-r--r-- 1 runner runner  901650 Nov 23 22:18 07-details-sheet.png
--rw-r--r-- 1 runner runner  921878 Nov 23 22:19 08-details-filled.png
--rw-r--r-- 1 runner runner  128256 Nov 23 22:19 09-after-book-tap.png
--rw-r--r-- 1 runner runner  128256 Nov 23 22:19 10-back.png
--rw-r--r-- 1 runner runner  128256 Nov 23 22:19 11-saved.png
--rw-r--r-- 1 runner runner  128256 Nov 23 22:19 12-details-tab.png
--rw-r--r-- 1 runner runner    7194 Nov 23 22:19 dump-back-home.xml
--rw-r--r-- 1 runner runner    7194 Nov 23 22:19 dump-details.xml
--rw-r--r-- 1 runner runner    8924 Nov 23 22:19 dump-filled.xml
--rw-r--r-- 1 runner runner   22569 Nov 23 22:17 dump-home.xml
--rw-r--r-- 1 runner runner    7545 Nov 23 22:18 dump-product.xml
--rw-r--r-- 1 runner runner    7194 Nov 23 22:19 dump-saved.xml
--rw-r--r-- 1 runner runner   25434 Nov 23 22:18 dump-search.xml
--rw-r--r-- 1 runner runner    8589 Nov 23 22:18 dump-sheet.xml
--rw-r--r-- 1 runner runner    1706 Nov 23 22:19 walk.log
+total 12292
+drwxr-xr-x 2 runner runner    4096 Nov 24 03:38 .
+drwxr-xr-x 6 runner runner    4096 Nov 24 03:35 ..
+-rw-r--r-- 1 runner runner 1889855 Nov 24 03:36 01-home.png
+-rw-r--r-- 1 runner runner 2284218 Nov 24 03:36 02-home-scrolled.png
+-rw-r--r-- 1 runner runner 1570983 Nov 24 03:36 03-shop.png
+-rw-r--r-- 1 runner runner 1570342 Nov 24 03:36 04-search.png
+-rw-r--r-- 1 runner runner 1392056 Nov 24 03:37 05-product.png
+-rw-r--r-- 1 runner runner 1389778 Nov 24 03:37 06-favourited.png
+-rw-r--r-- 1 runner runner  901981 Nov 24 03:37 07-details-sheet.png
+-rw-r--r-- 1 runner runner  922185 Nov 24 03:37 08-details-filled.png
+-rw-r--r-- 1 runner runner  128396 Nov 24 03:37 09-after-book-tap.png
+-rw-r--r-- 1 runner runner  129025 Nov 24 03:38 10-back.png
+-rw-r--r-- 1 runner runner  129025 Nov 24 03:38 11-saved.png
+-rw-r--r-- 1 runner runner  129025 Nov 24 03:38 12-details-tab.png
+-rw-r--r-- 1 runner runner    7194 Nov 24 03:38 dump-back-home.xml
+-rw-r--r-- 1 runner runner    7194 Nov 24 03:38 dump-details.xml
+-rw-r--r-- 1 runner runner    8924 Nov 24 03:37 dump-filled.xml
+-rw-r--r-- 1 runner runner   22569 Nov 24 03:36 dump-home.xml
+-rw-r--r-- 1 runner runner    7545 Nov 24 03:36 dump-product.xml
+-rw-r--r-- 1 runner runner    7194 Nov 24 03:38 dump-saved.xml
+-rw-r--r-- 1 runner runner   25434 Nov 24 03:36 dump-search.xml
+-rw-r--r-- 1 runner runner    8589 Nov 24 03:37 dump-sheet.xml
+-rw-r--r-- 1 runner runner    1706 Nov 24 03:38 walk.log
