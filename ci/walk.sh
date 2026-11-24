@@ -143,6 +143,7 @@ for i in $(seq 1 15); do
   echo "waiting for catalogue... $i"
   sleep 4
 done
+adb logcat -d -t 800 > "$SHOTS/logcat.txt" 2>/dev/null || true
 save_dump home
 shot 01-home
 if [ "$LOADED" != "1" ]; then echo "WALK ABORTED: catalogue never loaded"; visible_texts; exit 0; fi
