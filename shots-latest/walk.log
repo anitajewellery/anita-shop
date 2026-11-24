@@ -13,36 +13,31 @@ shot: 03-shop
 tap field 0 at 540 355
 shot: 04-search
 shot: 04b-empty-search
-ci/walk.sh: line 166: tap: command not found
+tap desc 'Clear search' at 964 356
+CLEAR OK - grid restored
 == open a product ==
-NOT FOUND (text): Kullu khokhor
-visible texts: The Collection | Kulluzzqq | All | Necklace | Earrings | Bangles | Ring | Featured | Newest | Price ↑ | Price ↓ | No pieces match your search | ✦ | Nothing matches | No piece matches “Kulluzzqq”. Try a shorter word, or browse the full collection. | See all pieces | HOME | SHOP | SAVED | DETAILS
+tap text 'Kullu khokhor' at 716 1321
 shot: 05-product
 shot: 05b-product-related
 == favourite this piece (heart) ==
-NOT FOUND (desc): Favourite
-visible texts: The Collection | Kulluzzqq by by | All | Necklace | Earrings | Bangles | Ring | Featured | Newest | Price ↑ | Price ↓ | No pieces match your search | ✦ | Nothing matches | No piece matches “Kulluzzqq by by”. Try a shorter word, or browse the full collection. | See all pieces | HOME | SHOP | SAVED | DETAILS
+tap desc 'Favourite' at 992 216
 shot: 06-favourited
 shot: 06b-back-from-product
-NOT FOUND (text): Kullu khokhor
-visible texts: The Collection | Kulluzzqq by by | All | Necklace | Earrings | Bangles | Ring | Featured | Newest | Price ↑ | Price ↓ | No pieces match your search | ✦ | Nothing matches | No piece matches “Kulluzzqq by by”. Try a shorter word, or browse the full collection. | See all pieces | HOME | SHOP | SAVED | DETAILS
+tap text 'Kullu khokhor' at 716 1321
 == book: first-booking details sheet ==
-NOT FOUND (text): Book on WhatsApp
-visible texts: The Collection | Kulluzzqq by by | All | Necklace | Earrings | Bangles | Ring | Featured | Newest | Price ↑ | Price ↓ | No pieces match your search | ✦ | Nothing matches | No piece matches “Kulluzzqq by by”. Try a shorter word, or browse the full collection. | See all pieces | HOME | SHOP | SAVED | DETAILS
+tap text 'Book on WhatsApp' at 660 2237
 shot: 07-details-sheet
-tap field 0 at 540 355
-NOT FOUND (field): 1
-visible texts: The Collection | Kulluzzqq by byEmulator Test | All | Necklace | Earrings | Bangles | Ring | Featured | Newest | Price ↑ | Price ↓ | No pieces match your search | ✦ | Nothing matches | No piece matches “Kulluzzqq by byEmulator Test”. Try a shorter word, or browse the full collection. | See all pieces | HOME | SHOP | SAVED | DETAILS
-NOT FOUND (field): 2
-visible texts: The Collection | Kulluzzqq by byEmulator Test9876543210 | All | Necklace | Earrings | Bangles | Ring | Featured | Newest | Price ↑ | Price ↓ | No pieces match your search | ✦ | Nothing matches | No piece matches “Kulluzzqq by byEmulator Test9876543210”. Try a shorter word, or browse the full collection. | See all pieces | HOME | SHOP | SAVED | DETAILS
+tap field 0 at 540 1368
+tap field 1 at 540 1600
+tap field 2 at 540 1848
 shot: 08-details-filled
-SHEET CLOSED EARLY
-NOT FOUND (text): Save & continue to WhatsApp
-visible texts: The Collection | Kulluzzqq by byEmulator Test9876543210Imphal Test Address | All | Necklace | Earrings | Bangles | Ring | Featured | Newest | Price ↑ | Price ↓ | No pieces match your search | ✦ | Nothing matches | No piece matches “Kulluzzqq by byEmulator Test9876543210Imphal Test Address”. Try a shorter word, or browse the full collection. | See all pieces | HOME | SHOP | SAVED | DETAILS
+sheet still open after filling - good
+tap text 'Save & continue to WhatsApp' at 540 2061
 shot: 09-after-book-tap
 == return to the app (relaunch; WhatsApp/browser may be on top) ==
 Starting: Intent { cmp=com.anitajewellery.shop/.MainActivity }
-Warning: Activity not started, intent has been delivered to currently running top-most instance.
+Warning: Activity not started, its current task has been brought to the front
+on product page - BACK to tabs
 shot: 10-back
 == saved tab (the favourited piece should be listed) ==
 tap text 'SAVED' at 654 2251
@@ -55,33 +50,33 @@ Starting: Intent { cmp=com.anitajewellery.shop/.MainActivity (has extras) }
 shot: 13-notif-tap-product
 NOTIF TAP OK - product page opened from the code extra
 == walk done ==
-total 10332
-drwxr-xr-x 2 runner runner    4096 Nov 24 09:41 .
-drwxr-xr-x 6 runner runner    4096 Nov 24 09:38 ..
--rw-r--r-- 1 runner runner 1826704 Nov 24 09:38 01-home.png
--rw-r--r-- 1 runner runner 2129973 Nov 24 09:38 02-home-scrolled.png
--rw-r--r-- 1 runner runner 1496363 Nov 24 09:38 03-shop.png
--rw-r--r-- 1 runner runner 1499827 Nov 24 09:39 04-search.png
--rw-r--r-- 1 runner runner  184902 Nov 24 09:39 04b-empty-search.png
--rw-r--r-- 1 runner runner  191839 Nov 24 09:39 05-product.png
--rw-r--r-- 1 runner runner  191883 Nov 24 09:39 05b-product-related.png
--rw-r--r-- 1 runner runner  191872 Nov 24 09:39 06-favourited.png
--rw-r--r-- 1 runner runner  142467 Nov 24 09:39 06b-back-from-product.png
--rw-r--r-- 1 runner runner  142493 Nov 24 09:40 07-details-sheet.png
--rw-r--r-- 1 runner runner  167271 Nov 24 09:40 08-details-filled.png
--rw-r--r-- 1 runner runner  166973 Nov 24 09:40 09-after-book-tap.png
--rw-r--r-- 1 runner runner  166973 Nov 24 09:40 10-back.png
--rw-r--r-- 1 runner runner   80396 Nov 24 09:40 11-saved.png
--rw-r--r-- 1 runner runner  109972 Nov 24 09:41 12-details-tab.png
--rw-r--r-- 1 runner runner 1651484 Nov 24 09:41 13-notif-tap-product.png
--rw-r--r-- 1 runner runner   17579 Nov 24 09:40 dump-back-home.xml
--rw-r--r-- 1 runner runner   17495 Nov 24 09:39 dump-backnav.xml
--rw-r--r-- 1 runner runner   10606 Nov 24 09:41 dump-details.xml
--rw-r--r-- 1 runner runner   17579 Nov 24 09:40 dump-filled.xml
--rw-r--r-- 1 runner runner   23234 Nov 24 09:38 dump-home.xml
--rw-r--r-- 1 runner runner   11605 Nov 24 09:41 dump-notif-tap.xml
--rw-r--r-- 1 runner runner   17483 Nov 24 09:39 dump-product.xml
--rw-r--r-- 1 runner runner    8535 Nov 24 09:40 dump-saved.xml
--rw-r--r-- 1 runner runner   28722 Nov 24 09:39 dump-search.xml
--rw-r--r-- 1 runner runner   17495 Nov 24 09:39 dump-sheet.xml
--rw-r--r-- 1 runner runner    4108 Nov 24 09:41 walk.log
+total 20116
+drwxr-xr-x 2 runner runner    4096 Nov 24 09:44 .
+drwxr-xr-x 6 runner runner    4096 Nov 24 09:41 ..
+-rw-r--r-- 1 runner runner 1823883 Nov 24 09:41 01-home.png
+-rw-r--r-- 1 runner runner 2081710 Nov 24 09:41 02-home-scrolled.png
+-rw-r--r-- 1 runner runner 1495114 Nov 24 09:41 03-shop.png
+-rw-r--r-- 1 runner runner 1499897 Nov 24 09:42 04-search.png
+-rw-r--r-- 1 runner runner  193188 Nov 24 09:42 04b-empty-search.png
+-rw-r--r-- 1 runner runner 2111457 Nov 24 09:42 05-product.png
+-rw-r--r-- 1 runner runner 1863822 Nov 24 09:42 05b-product-related.png
+-rw-r--r-- 1 runner runner 2109665 Nov 24 09:42 06-favourited.png
+-rw-r--r-- 1 runner runner 1494065 Nov 24 09:42 06b-back-from-product.png
+-rw-r--r-- 1 runner runner  901841 Nov 24 09:43 07-details-sheet.png
+-rw-r--r-- 1 runner runner  922088 Nov 24 09:43 08-details-filled.png
+-rw-r--r-- 1 runner runner  128570 Nov 24 09:43 09-after-book-tap.png
+-rw-r--r-- 1 runner runner 1494106 Nov 24 09:44 10-back.png
+-rw-r--r-- 1 runner runner  452031 Nov 24 09:44 11-saved.png
+-rw-r--r-- 1 runner runner  130492 Nov 24 09:44 12-details-tab.png
+-rw-r--r-- 1 runner runner 1651325 Nov 24 09:44 13-notif-tap-product.png
+-rw-r--r-- 1 runner runner   27739 Nov 24 09:43 dump-back-home.xml
+-rw-r--r-- 1 runner runner   27739 Nov 24 09:42 dump-backnav.xml
+-rw-r--r-- 1 runner runner   10615 Nov 24 09:44 dump-details.xml
+-rw-r--r-- 1 runner runner    8924 Nov 24 09:43 dump-filled.xml
+-rw-r--r-- 1 runner runner   23234 Nov 24 09:41 dump-home.xml
+-rw-r--r-- 1 runner runner   11605 Nov 24 09:44 dump-notif-tap.xml
+-rw-r--r-- 1 runner runner   11550 Nov 24 09:42 dump-product.xml
+-rw-r--r-- 1 runner runner    9442 Nov 24 09:44 dump-saved.xml
+-rw-r--r-- 1 runner runner   28722 Nov 24 09:42 dump-search.xml
+-rw-r--r-- 1 runner runner    8589 Nov 24 09:43 dump-sheet.xml
+-rw-r--r-- 1 runner runner    1710 Nov 24 09:44 walk.log
