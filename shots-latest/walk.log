@@ -16,14 +16,14 @@ shot: 04b-empty-search
 tap desc 'Clear search' at 964 356
 CLEAR OK - grid restored
 == open a product ==
-tap text 'Kullu khokhor' at 716 1321
+tap text 'Kullu khokhor' at 793 1321
 shot: 05-product
 shot: 05b-product-related
 == favourite this piece (heart) ==
 tap desc 'Favourite' at 992 216
 shot: 06-favourited
 shot: 06b-back-from-product
-tap text 'Kullu khokhor' at 716 1321
+tap text 'Kullu khokhor' at 793 1321
 == book: first-booking details sheet ==
 tap text 'Book on WhatsApp' at 660 2237
 shot: 07-details-sheet
@@ -50,33 +50,33 @@ Starting: Intent { cmp=com.anitajewellery.shop/.MainActivity (has extras) }
 shot: 13-notif-tap-product
 NOTIF TAP OK - product page opened from the code extra
 == walk done ==
-total 20116
-drwxr-xr-x 2 runner runner    4096 Nov 24 09:44 .
-drwxr-xr-x 6 runner runner    4096 Nov 24 09:41 ..
--rw-r--r-- 1 runner runner 1823883 Nov 24 09:41 01-home.png
--rw-r--r-- 1 runner runner 2081710 Nov 24 09:41 02-home-scrolled.png
--rw-r--r-- 1 runner runner 1495114 Nov 24 09:41 03-shop.png
--rw-r--r-- 1 runner runner 1499897 Nov 24 09:42 04-search.png
--rw-r--r-- 1 runner runner  193188 Nov 24 09:42 04b-empty-search.png
--rw-r--r-- 1 runner runner 2111457 Nov 24 09:42 05-product.png
--rw-r--r-- 1 runner runner 1863822 Nov 24 09:42 05b-product-related.png
--rw-r--r-- 1 runner runner 2109665 Nov 24 09:42 06-favourited.png
--rw-r--r-- 1 runner runner 1494065 Nov 24 09:42 06b-back-from-product.png
--rw-r--r-- 1 runner runner  901841 Nov 24 09:43 07-details-sheet.png
--rw-r--r-- 1 runner runner  922088 Nov 24 09:43 08-details-filled.png
--rw-r--r-- 1 runner runner  128570 Nov 24 09:43 09-after-book-tap.png
--rw-r--r-- 1 runner runner 1494106 Nov 24 09:44 10-back.png
--rw-r--r-- 1 runner runner  452031 Nov 24 09:44 11-saved.png
--rw-r--r-- 1 runner runner  130492 Nov 24 09:44 12-details-tab.png
--rw-r--r-- 1 runner runner 1651325 Nov 24 09:44 13-notif-tap-product.png
--rw-r--r-- 1 runner runner   27739 Nov 24 09:43 dump-back-home.xml
--rw-r--r-- 1 runner runner   27739 Nov 24 09:42 dump-backnav.xml
--rw-r--r-- 1 runner runner   10615 Nov 24 09:44 dump-details.xml
--rw-r--r-- 1 runner runner    8924 Nov 24 09:43 dump-filled.xml
--rw-r--r-- 1 runner runner   23234 Nov 24 09:41 dump-home.xml
--rw-r--r-- 1 runner runner   11605 Nov 24 09:44 dump-notif-tap.xml
--rw-r--r-- 1 runner runner   11550 Nov 24 09:42 dump-product.xml
--rw-r--r-- 1 runner runner    9442 Nov 24 09:44 dump-saved.xml
--rw-r--r-- 1 runner runner   28722 Nov 24 09:42 dump-search.xml
--rw-r--r-- 1 runner runner    8589 Nov 24 09:43 dump-sheet.xml
--rw-r--r-- 1 runner runner    1710 Nov 24 09:44 walk.log
+total 20136
+drwxr-xr-x 2 runner runner    4096 Nov 24 09:51 .
+drwxr-xr-x 6 runner runner    4096 Nov 24 09:48 ..
+-rw-r--r-- 1 runner runner 1824868 Nov 24 09:48 01-home.png
+-rw-r--r-- 1 runner runner 2115769 Nov 24 09:48 02-home-scrolled.png
+-rw-r--r-- 1 runner runner 1495138 Nov 24 09:49 03-shop.png
+-rw-r--r-- 1 runner runner 1499583 Nov 24 09:49 04-search.png
+-rw-r--r-- 1 runner runner  190987 Nov 24 09:49 04b-empty-search.png
+-rw-r--r-- 1 runner runner 2110976 Nov 24 09:49 05-product.png
+-rw-r--r-- 1 runner runner 1863181 Nov 24 09:49 05b-product-related.png
+-rw-r--r-- 1 runner runner 2109146 Nov 24 09:49 06-favourited.png
+-rw-r--r-- 1 runner runner 1493830 Nov 24 09:49 06b-back-from-product.png
+-rw-r--r-- 1 runner runner  901926 Nov 24 09:50 07-details-sheet.png
+-rw-r--r-- 1 runner runner  922181 Nov 24 09:50 08-details-filled.png
+-rw-r--r-- 1 runner runner  128864 Nov 24 09:50 09-after-book-tap.png
+-rw-r--r-- 1 runner runner 1493947 Nov 24 09:51 10-back.png
+-rw-r--r-- 1 runner runner  452468 Nov 24 09:51 11-saved.png
+-rw-r--r-- 1 runner runner  130976 Nov 24 09:51 12-details-tab.png
+-rw-r--r-- 1 runner runner 1651692 Nov 24 09:51 13-notif-tap-product.png
+-rw-r--r-- 1 runner runner   27739 Nov 24 09:51 dump-back-home.xml
+-rw-r--r-- 1 runner runner   27739 Nov 24 09:49 dump-backnav.xml
+-rw-r--r-- 1 runner runner   10615 Nov 24 09:51 dump-details.xml
+-rw-r--r-- 1 runner runner    8924 Nov 24 09:50 dump-filled.xml
+-rw-r--r-- 1 runner runner   23234 Nov 24 09:48 dump-home.xml
+-rw-r--r-- 1 runner runner   11605 Nov 24 09:51 dump-notif-tap.xml
+-rw-r--r-- 1 runner runner   11550 Nov 24 09:49 dump-product.xml
+-rw-r--r-- 1 runner runner    9442 Nov 24 09:51 dump-saved.xml
+-rw-r--r-- 1 runner runner   28722 Nov 24 09:49 dump-search.xml
+-rw-r--r-- 1 runner runner    8589 Nov 24 09:50 dump-sheet.xml
+-rw-r--r-- 1 runner runner    1710 Nov 24 09:51 walk.log
