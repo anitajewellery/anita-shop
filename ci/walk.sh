@@ -181,6 +181,13 @@ adb shell input swipe 540 700 540 1800 400; sleep 1
 echo "== favourite this piece (heart) =="
 tap_desc "Favourite"
 shot 06-favourited
+# Back-navigation check (v1.6): system back from a product must return to the
+# shop grid, NOT exit the app. Then reopen the product for the booking steps.
+adb shell input keyevent 4; sleep 2
+save_dump backnav
+shot 06b-back-from-product
+tap_text "Kullu khokhor" contains
+sleep 3
 
 echo "== book: first-booking details sheet =="
 tap_text "Book on WhatsApp"
