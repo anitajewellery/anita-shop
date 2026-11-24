@@ -1,3 +1,4 @@
+# walk run: v1.9.1 rollback verification
 # walk run: v1.9 frosted top strip + name verdict
 #!/usr/bin/env bash
 # Scripted walk of the Anita Jewellery CUSTOMER app on the emulator.
