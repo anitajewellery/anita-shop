@@ -3,80 +3,21 @@ Performing Streamed Install
 Success
 Starting: Intent { cmp=com.anitajewellery.shop/.MainActivity }
 == wait for the catalogue (live feed) ==
-catalogue loaded after ~4s
+waiting for catalogue... 1
+waiting for catalogue... 2
+waiting for catalogue... 3
+waiting for catalogue... 4
+waiting for catalogue... 5
+waiting for catalogue... 6
+waiting for catalogue... 7
+waiting for catalogue... 8
+waiting for catalogue... 9
+waiting for catalogue... 10
+waiting for catalogue... 11
+waiting for catalogue... 12
+waiting for catalogue... 13
+waiting for catalogue... 14
+waiting for catalogue... 15
 shot: 01-home
-== home, scrolled ==
-shot: 02-home-scrolled
-== shop tab + search ==
-tap text 'SHOP' at 426 2251
-shot: 03-shop
-tap field 0 at 540 355
-shot: 04-search
-shot: 04b-empty-search
-tap desc 'Clear search' at 964 356
-CLEAR OK - grid restored
-== open a product ==
-tap text 'Kullu khokhor' at 793 1321
-shot: 05-product
-shot: 05b-product-related
-== favourite this piece (heart) ==
-tap desc 'Favourite' at 992 216
-shot: 06-favourited
-shot: 06b-back-from-product
-tap text 'Kullu khokhor' at 793 1321
-== book: first-booking details sheet ==
-tap text 'Book on WhatsApp' at 660 2237
-shot: 07-details-sheet
-tap field 0 at 540 1368
-tap field 1 at 540 1600
-tap field 2 at 540 1848
-shot: 08-details-filled
-sheet still open after filling - good
-tap text 'Save & continue to WhatsApp' at 540 2061
-shot: 09-after-book-tap
-== return to the app (relaunch; WhatsApp/browser may be on top) ==
-Starting: Intent { cmp=com.anitajewellery.shop/.MainActivity }
-Warning: Activity not started, its current task has been brought to the front
-on product page - BACK to tabs
-shot: 10-back
-== saved tab (the favourited piece should be listed) ==
-tap text 'SAVED' at 654 2251
-shot: 11-saved
-== details tab (saved details should be pre-filled) ==
-tap text 'DETAILS' at 882 2251
-shot: 12-details-tab
-== notification tap: launch with a product code extra (what an FCM tap delivers) ==
-Starting: Intent { cmp=com.anitajewellery.shop/.MainActivity (has extras) }
-shot: 13-notif-tap-product
-NOTIF TAP OK - product page opened from the code extra
-== walk done ==
-total 20188
-drwxr-xr-x 2 runner runner    4096 Nov 24 12:02 .
-drwxr-xr-x 6 runner runner    4096 Nov 24 11:59 ..
--rw-r--r-- 1 runner runner 1823956 Nov 24 12:00 01-home.png
--rw-r--r-- 1 runner runner 2173253 Nov 24 12:00 02-home-scrolled.png
--rw-r--r-- 1 runner runner 1495210 Nov 24 12:00 03-shop.png
--rw-r--r-- 1 runner runner 1499705 Nov 24 12:00 04-search.png
--rw-r--r-- 1 runner runner  184521 Nov 24 12:00 04b-empty-search.png
--rw-r--r-- 1 runner runner 2111194 Nov 24 12:00 05-product.png
--rw-r--r-- 1 runner runner 1863397 Nov 24 12:01 05b-product-related.png
--rw-r--r-- 1 runner runner 2109352 Nov 24 12:01 06-favourited.png
--rw-r--r-- 1 runner runner 1493935 Nov 24 12:01 06b-back-from-product.png
--rw-r--r-- 1 runner runner  901502 Nov 24 12:01 07-details-sheet.png
--rw-r--r-- 1 runner runner  921772 Nov 24 12:01 08-details-filled.png
--rw-r--r-- 1 runner runner  128105 Nov 24 12:02 09-after-book-tap.png
--rw-r--r-- 1 runner runner 1493962 Nov 24 12:02 10-back.png
--rw-r--r-- 1 runner runner  452275 Nov 24 12:02 11-saved.png
--rw-r--r-- 1 runner runner  130746 Nov 24 12:02 12-details-tab.png
--rw-r--r-- 1 runner runner 1651614 Nov 24 12:02 13-notif-tap-product.png
--rw-r--r-- 1 runner runner   27739 Nov 24 12:02 dump-back-home.xml
--rw-r--r-- 1 runner runner   27739 Nov 24 12:01 dump-backnav.xml
--rw-r--r-- 1 runner runner   10615 Nov 24 12:02 dump-details.xml
--rw-r--r-- 1 runner runner    8924 Nov 24 12:01 dump-filled.xml
--rw-r--r-- 1 runner runner   23234 Nov 24 12:00 dump-home.xml
--rw-r--r-- 1 runner runner   11605 Nov 24 12:02 dump-notif-tap.xml
--rw-r--r-- 1 runner runner   11550 Nov 24 12:00 dump-product.xml
--rw-r--r-- 1 runner runner    9442 Nov 24 12:02 dump-saved.xml
--rw-r--r-- 1 runner runner   28722 Nov 24 12:00 dump-search.xml
--rw-r--r-- 1 runner runner    8589 Nov 24 12:01 dump-sheet.xml
--rw-r--r-- 1 runner runner    1710 Nov 24 12:02 walk.log
+WALK ABORTED: catalogue never loaded
+visible texts: Tue, Nov 24 | Gmail | Photos | YouTube | Phone | Messages | Chrome | Anita Jewellery
