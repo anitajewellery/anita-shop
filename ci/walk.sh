@@ -160,12 +160,23 @@ hide_keyboard
 sleep 2
 save_dump search
 shot 04-search
+# Round-1 polish check: nonsense search -> the new empty state, then clear via the x button.
+$ADB shell input text zzqq; sleep 1
+shot 04b-empty-search
+tap 950 355 "clear search"
+sleep 1
 
 echo "== open a product =="
 tap_text "Kullu khokhor" contains
 sleep 3
 save_dump product
 shot 05-product
+# Round-1 polish check: scroll the product page to the related-pieces rail, then back to the top.
+$ADB shell input swipe 540 1800 540 700 400; sleep 1
+$ADB shell input swipe 540 1800 540 700 400; sleep 1
+shot 05b-product-related
+$ADB shell input swipe 540 700 540 1800 400; sleep 1
+$ADB shell input swipe 540 700 540 1800 400; sleep 1
 
 echo "== favourite this piece (heart) =="
 tap_desc "Favourite"
