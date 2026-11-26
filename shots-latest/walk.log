@@ -50,34 +50,34 @@ Starting: Intent { cmp=com.anitajewellery.shop/.MainActivity (has extras) }
 shot: 13-notif-tap-product
 NOTIF TAP OK - product page opened from the code extra
 == walk done ==
-total 20724
-drwxr-xr-x 2 runner runner    4096 Nov 25 09:08 .
-drwxr-xr-x 6 runner runner    4096 Nov 25 09:05 ..
--rw-r--r-- 1 runner runner 1860440 Nov 25 09:05 01-home.png
--rw-r--r-- 1 runner runner 2276225 Nov 25 09:05 02-home-scrolled.png
--rw-r--r-- 1 runner runner 1567726 Nov 25 09:05 03-shop.png
--rw-r--r-- 1 runner runner 1566664 Nov 25 09:06 04-search.png
--rw-r--r-- 1 runner runner  192836 Nov 25 09:06 04b-empty-search.png
--rw-r--r-- 1 runner runner 2111930 Nov 25 09:06 05-product.png
--rw-r--r-- 1 runner runner 1857378 Nov 25 09:06 05b-product-related.png
--rw-r--r-- 1 runner runner 2110108 Nov 25 09:06 06-favourited.png
--rw-r--r-- 1 runner runner 1566187 Nov 25 09:06 06b-back-from-product.png
--rw-r--r-- 1 runner runner  901740 Nov 25 09:07 07-details-sheet.png
--rw-r--r-- 1 runner runner  922001 Nov 25 09:07 08-details-filled.png
--rw-r--r-- 1 runner runner  128526 Nov 25 09:07 09-after-book-tap.png
--rw-r--r-- 1 runner runner 1565989 Nov 25 09:07 10-back.png
--rw-r--r-- 1 runner runner  457610 Nov 25 09:08 11-saved.png
--rw-r--r-- 1 runner runner  131784 Nov 25 09:08 12-details-tab.png
--rw-r--r-- 1 runner runner 1652116 Nov 25 09:08 13-notif-tap-product.png
--rw-r--r-- 1 runner runner   27098 Nov 25 09:07 dump-back-home.xml
--rw-r--r-- 1 runner runner   27098 Nov 25 09:06 dump-backnav.xml
--rw-r--r-- 1 runner runner   10615 Nov 25 09:08 dump-details.xml
--rw-r--r-- 1 runner runner    8924 Nov 25 09:07 dump-filled.xml
--rw-r--r-- 1 runner runner   23234 Nov 25 09:05 dump-home.xml
--rw-r--r-- 1 runner runner   11605 Nov 25 09:08 dump-notif-tap.xml
--rw-r--r-- 1 runner runner   11550 Nov 25 09:06 dump-product.xml
--rw-r--r-- 1 runner runner    9440 Nov 25 09:08 dump-saved.xml
--rw-r--r-- 1 runner runner   28081 Nov 25 09:06 dump-search.xml
--rw-r--r-- 1 runner runner    8589 Nov 25 09:07 dump-sheet.xml
--rw-r--r-- 1 runner runner  111801 Nov 25 09:05 logcat.txt
--rw-r--r-- 1 runner runner    1710 Nov 25 09:08 walk.log
+total 20712
+drwxr-xr-x 2 runner runner    4096 Nov 26 14:42 .
+drwxr-xr-x 6 runner runner    4096 Nov 26 14:39 ..
+-rw-r--r-- 1 runner runner 1859752 Nov 26 14:40 01-home.png
+-rw-r--r-- 1 runner runner 2249921 Nov 26 14:40 02-home-scrolled.png
+-rw-r--r-- 1 runner runner 1567250 Nov 26 14:40 03-shop.png
+-rw-r--r-- 1 runner runner 1566194 Nov 26 14:40 04-search.png
+-rw-r--r-- 1 runner runner  192379 Nov 26 14:40 04b-empty-search.png
+-rw-r--r-- 1 runner runner 2111382 Nov 26 14:40 05-product.png
+-rw-r--r-- 1 runner runner 1856758 Nov 26 14:40 05b-product-related.png
+-rw-r--r-- 1 runner runner 2109529 Nov 26 14:40 06-favourited.png
+-rw-r--r-- 1 runner runner 1565400 Nov 26 14:41 06b-back-from-product.png
+-rw-r--r-- 1 runner runner  901379 Nov 26 14:41 07-details-sheet.png
+-rw-r--r-- 1 runner runner  921656 Nov 26 14:41 08-details-filled.png
+-rw-r--r-- 1 runner runner  127810 Nov 26 14:41 09-after-book-tap.png
+-rw-r--r-- 1 runner runner 1565328 Nov 26 14:42 10-back.png
+-rw-r--r-- 1 runner runner  456186 Nov 26 14:42 11-saved.png
+-rw-r--r-- 1 runner runner  130257 Nov 26 14:42 12-details-tab.png
+-rw-r--r-- 1 runner runner 1651188 Nov 26 14:42 13-notif-tap-product.png
+-rw-r--r-- 1 runner runner   27098 Nov 26 14:42 dump-back-home.xml
+-rw-r--r-- 1 runner runner   27098 Nov 26 14:41 dump-backnav.xml
+-rw-r--r-- 1 runner runner   10615 Nov 26 14:42 dump-details.xml
+-rw-r--r-- 1 runner runner    8924 Nov 26 14:41 dump-filled.xml
+-rw-r--r-- 1 runner runner   23234 Nov 26 14:40 dump-home.xml
+-rw-r--r-- 1 runner runner   11605 Nov 26 14:42 dump-notif-tap.xml
+-rw-r--r-- 1 runner runner   11550 Nov 26 14:40 dump-product.xml
+-rw-r--r-- 1 runner runner    9440 Nov 26 14:42 dump-saved.xml
+-rw-r--r-- 1 runner runner   28081 Nov 26 14:40 dump-search.xml
+-rw-r--r-- 1 runner runner    8589 Nov 26 14:41 dump-sheet.xml
+-rw-r--r-- 1 runner runner  133599 Nov 26 14:39 logcat.log
+-rw-r--r-- 1 runner runner    1710 Nov 26 14:42 walk.log
