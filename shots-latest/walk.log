@@ -14,30 +14,37 @@ tap field 0 at 540 355
 shot: 04-search
 shot: 04b-empty-search
 tap desc 'Clear search' at 964 356
-CLEAR OK - grid restored
+CLEAR MISS - grid not restored
+visible texts: The Collection | Search pieces… | All | Necklace | Earrings | Bangles | Ring | Featured | Newest | Price ↑ | Price ↓ | 24 pieces | NEW | Kullu Necklace | ₹1,500 | NEW | Kullu Khokhor | ₹2,600 | NEW | ONLY 1 LEFT | Parijat Lickhom | ₹3,500 | NEW | ONLY 2 LEFT | Kiyang Lickphang Necklace Kullu | ₹2,800 | HOME | SHOP | SAVED | DETAILS
 == open a product ==
-tap text 'Kullu khokhor' at 793 1324
+NOT FOUND (text): Kullu khokhor
+visible texts: The Collection | Search pieces… | All | Necklace | Earrings | Bangles | Ring | Featured | Newest | Price ↑ | Price ↓ | 24 pieces | NEW | Kullu Necklace | ₹1,500 | NEW | Kullu Khokhor | ₹2,600 | NEW | ONLY 1 LEFT | Parijat Lickhom | ₹3,500 | NEW | ONLY 2 LEFT | Kiyang Lickphang Necklace Kullu | ₹2,800 | HOME | SHOP | SAVED | DETAILS
 shot: 05-product
 shot: 05b-product-related
 == favourite this piece (heart) ==
-tap desc 'Favourite' at 992 216
+NOT FOUND (desc): Favourite
+visible texts: The Collection | by by | All | Necklace | Earrings | Bangles | Ring | Featured | Newest | Price ↑ | Price ↓ | No pieces match your search | ✦ | Nothing matches | No piece matches “by by”. Try a shorter word, or browse the full collection. | See all pieces | HOME | SHOP | SAVED | DETAILS
 shot: 06-favourited
 shot: 06b-back-from-product
-tap text 'Kullu khokhor' at 793 1324
+NOT FOUND (text): Kullu khokhor
+visible texts: The Collection | by by | All | Necklace | Earrings | Bangles | Ring | Featured | Newest | Price ↑ | Price ↓ | No pieces match your search | ✦ | Nothing matches | No piece matches “by by”. Try a shorter word, or browse the full collection. | See all pieces | HOME | SHOP | SAVED | DETAILS
 == book: first-booking details sheet ==
-tap text 'Book on WhatsApp' at 660 2237
+NOT FOUND (text): Book on WhatsApp
+visible texts: The Collection | by by | All | Necklace | Earrings | Bangles | Ring | Featured | Newest | Price ↑ | Price ↓ | No pieces match your search | ✦ | Nothing matches | No piece matches “by by”. Try a shorter word, or browse the full collection. | See all pieces | HOME | SHOP | SAVED | DETAILS
 shot: 07-details-sheet
-tap field 0 at 540 1368
-tap field 1 at 540 1600
-tap field 2 at 540 1848
+tap field 0 at 540 355
+NOT FOUND (field): 1
+visible texts: The Collection | by byEmulator Test | All | Necklace | Earrings | Bangles | Ring | Featured | Newest | Price ↑ | Price ↓ | No pieces match your search | ✦ | Nothing matches | No piece matches “by byEmulator Test”. Try a shorter word, or browse the full collection. | See all pieces | HOME | SHOP | SAVED | DETAILS
+NOT FOUND (field): 2
+visible texts: The Collection | by byEmulator Test9876543210 | All | Necklace | Earrings | Bangles | Ring | Featured | Newest | Price ↑ | Price ↓ | No pieces match your search | ✦ | Nothing matches | No piece matches “by byEmulator Test9876543210”. Try a shorter word, or browse the full collection. | See all pieces | HOME | SHOP | SAVED | DETAILS
 shot: 08-details-filled
-sheet still open after filling - good
-tap text 'Save & continue to WhatsApp' at 540 2061
+SHEET CLOSED EARLY
+NOT FOUND (text): Save & continue to WhatsApp
+visible texts: The Collection | by byEmulator Test9876543210Imphal Test Address | All | Necklace | Earrings | Bangles | Ring | Featured | Newest | Price ↑ | Price ↓ | No pieces match your search | ✦ | Nothing matches | No piece matches “by byEmulator Test9876543210Imphal Test Address”. Try a shorter word, or browse the full collection. | See all pieces | HOME | SHOP | SAVED | DETAILS
 shot: 09-after-book-tap
 == return to the app (relaunch; WhatsApp/browser may be on top) ==
 Starting: Intent { cmp=com.anitajewellery.shop/.MainActivity }
-Warning: Activity not started, its current task has been brought to the front
-on product page - BACK to tabs
+Warning: Activity not started, intent has been delivered to currently running top-most instance.
 shot: 10-back
 == saved tab (the favourited piece should be listed) ==
 tap text 'SAVED' at 654 2251
@@ -50,34 +57,34 @@ Starting: Intent { cmp=com.anitajewellery.shop/.MainActivity (has extras) }
 shot: 13-notif-tap-product
 NOTIF TAP OK - product page opened from the code extra
 == walk done ==
-total 20112
-drwxr-xr-x 2 runner runner    4096 Nov 26 14:48 .
-drwxr-xr-x 6 runner runner    4096 Nov 26 14:45 ..
--rw-r--r-- 1 runner runner 1860047 Nov 26 14:46 01-home.png
--rw-r--r-- 1 runner runner 2259175 Nov 26 14:46 02-home-scrolled.png
--rw-r--r-- 1 runner runner 1567467 Nov 26 14:46 03-shop.png
--rw-r--r-- 1 runner runner  928205 Nov 26 14:46 04-search.png
--rw-r--r-- 1 runner runner  192863 Nov 26 14:46 04b-empty-search.png
--rw-r--r-- 1 runner runner 2111522 Nov 26 14:46 05-product.png
--rw-r--r-- 1 runner runner 1856998 Nov 26 14:46 05b-product-related.png
--rw-r--r-- 1 runner runner 2109381 Nov 26 14:47 06-favourited.png
--rw-r--r-- 1 runner runner 1565641 Nov 26 14:47 06b-back-from-product.png
--rw-r--r-- 1 runner runner  901521 Nov 26 14:47 07-details-sheet.png
--rw-r--r-- 1 runner runner  921786 Nov 26 14:47 08-details-filled.png
--rw-r--r-- 1 runner runner  128451 Nov 26 14:48 09-after-book-tap.png
--rw-r--r-- 1 runner runner 1565977 Nov 26 14:48 10-back.png
--rw-r--r-- 1 runner runner  457149 Nov 26 14:48 11-saved.png
--rw-r--r-- 1 runner runner  131265 Nov 26 14:48 12-details-tab.png
--rw-r--r-- 1 runner runner 1651940 Nov 26 14:48 13-notif-tap-product.png
--rw-r--r-- 1 runner runner   27063 Nov 26 14:48 dump-back-home.xml
--rw-r--r-- 1 runner runner   27063 Nov 26 14:47 dump-backnav.xml
--rw-r--r-- 1 runner runner   10580 Nov 26 14:48 dump-details.xml
--rw-r--r-- 1 runner runner    8924 Nov 26 14:47 dump-filled.xml
--rw-r--r-- 1 runner runner   23199 Nov 26 14:46 dump-home.xml
--rw-r--r-- 1 runner runner   11570 Nov 26 14:48 dump-notif-tap.xml
--rw-r--r-- 1 runner runner   11515 Nov 26 14:46 dump-product.xml
--rw-r--r-- 1 runner runner    9405 Nov 26 14:48 dump-saved.xml
--rw-r--r-- 1 runner runner   28046 Nov 26 14:46 dump-search.xml
--rw-r--r-- 1 runner runner    8589 Nov 26 14:47 dump-sheet.xml
--rw-r--r-- 1 runner runner  145976 Nov 26 14:45 logcat.log
--rw-r--r-- 1 runner runner    1710 Nov 26 14:48 walk.log
+total 9628
+drwxr-xr-x 2 runner runner    4096 Nov 28 04:24 .
+drwxr-xr-x 6 runner runner    4096 Nov 28 04:21 ..
+-rw-r--r-- 1 runner runner 1161582 Nov 28 04:21 01-home.png
+-rw-r--r-- 1 runner runner 1695022 Nov 28 04:21 02-home-scrolled.png
+-rw-r--r-- 1 runner runner 1359916 Nov 28 04:22 03-shop.png
+-rw-r--r-- 1 runner runner 1358419 Nov 28 04:22 04-search.png
+-rw-r--r-- 1 runner runner  184118 Nov 28 04:22 04b-empty-search.png
+-rw-r--r-- 1 runner runner  723582 Nov 28 04:22 05-product.png
+-rw-r--r-- 1 runner runner  187561 Nov 28 04:22 05b-product-related.png
+-rw-r--r-- 1 runner runner  187661 Nov 28 04:22 06-favourited.png
+-rw-r--r-- 1 runner runner  138036 Nov 28 04:22 06b-back-from-product.png
+-rw-r--r-- 1 runner runner  138715 Nov 28 04:23 07-details-sheet.png
+-rw-r--r-- 1 runner runner  164804 Nov 28 04:23 08-details-filled.png
+-rw-r--r-- 1 runner runner  164804 Nov 28 04:23 09-after-book-tap.png
+-rw-r--r-- 1 runner runner  163741 Nov 28 04:24 10-back.png
+-rw-r--r-- 1 runner runner   79848 Nov 28 04:24 11-saved.png
+-rw-r--r-- 1 runner runner  124084 Nov 28 04:24 12-details-tab.png
+-rw-r--r-- 1 runner runner 1651195 Nov 28 04:24 13-notif-tap-product.png
+-rw-r--r-- 1 runner runner   17524 Nov 28 04:24 dump-back-home.xml
+-rw-r--r-- 1 runner runner   17440 Nov 28 04:22 dump-backnav.xml
+-rw-r--r-- 1 runner runner   10966 Nov 28 04:24 dump-details.xml
+-rw-r--r-- 1 runner runner   17524 Nov 28 04:23 dump-filled.xml
+-rw-r--r-- 1 runner runner   23165 Nov 28 04:21 dump-home.xml
+-rw-r--r-- 1 runner runner   11570 Nov 28 04:24 dump-notif-tap.xml
+-rw-r--r-- 1 runner runner   27384 Nov 28 04:22 dump-product.xml
+-rw-r--r-- 1 runner runner    8500 Nov 28 04:24 dump-saved.xml
+-rw-r--r-- 1 runner runner   28046 Nov 28 04:22 dump-search.xml
+-rw-r--r-- 1 runner runner   17440 Nov 28 04:23 dump-sheet.xml
+-rw-r--r-- 1 runner runner  128705 Nov 28 04:21 logcat.log
+-rw-r--r-- 1 runner runner    4414 Nov 28 04:24 walk.log
