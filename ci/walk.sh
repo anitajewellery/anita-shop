@@ -10,6 +10,11 @@ set -u
 PKG=com.anitajewellery.shop
 SHOTS="$GITHUB_WORKSPACE/shots"
 mkdir -p "$SHOTS"
+# v1.13: a missed step must fail the run — GitHub Actions used to report
+# "success" while half the walk had NOT FOUNDs. Any helper that cannot find
+# its target, or any check that fails, sets FAILED=1; the script exits 1
+# at the end so a green run means a real pass.
+FAILED=0
 exec > >(tee -a "$SHOTS/walk.log") 2>&1
 
 shot() { adb exec-out screencap -p > "$SHOTS/$1.png"; echo "shot: $1"; }
@@ -55,7 +60,7 @@ PY
 tap_text() {
   dump_ui
   C=$(center_of "$1" "${2:-exact}")
-  if [ -n "$C" ]; then echo "tap text '$1' at $C"; adb shell input tap $C; else echo "NOT FOUND (text): $1"; visible_texts; fi
+  if [ -n "$C" ]; then echo "tap text '$1' at $C"; adb shell input tap $C; else echo "NOT FOUND (text): $1"; FAILED=1; visible_texts; fi
   sleep 2
 }
 
@@ -74,7 +79,7 @@ if n < len(fields):
     print((int(m.group(1)) + int(m.group(3))) // 2, (int(m.group(2)) + int(m.group(4))) // 2)
 PY
 )
-  if [ -n "$C" ]; then echo "tap field $1 at $C"; adb shell input tap $C; else echo "NOT FOUND (field): $1"; visible_texts; fi
+  if [ -n "$C" ]; then echo "tap field $1 at $C"; adb shell input tap $C; else echo "NOT FOUND (field): $1"; FAILED=1; visible_texts; fi
   sleep 2
 }
 
@@ -94,7 +99,7 @@ for m in re.finditer(r'content-desc="([^"]*)"[^>]*bounds="\[(\d+),(\d+)\]\[(\d+)
         break
 PY
 )
-  if [ -n "$C" ]; then echo "tap desc '$1' at $C"; adb shell input tap $C; else echo "NOT FOUND (desc): $1"; visible_texts; fi
+  if [ -n "$C" ]; then echo "tap desc '$1' at $C"; adb shell input tap $C; else echo "NOT FOUND (desc): $1"; FAILED=1; visible_texts; fi
   sleep 2
 }
 
@@ -143,10 +148,9 @@ for i in $(seq 1 15); do
   echo "waiting for catalogue... $i"
   sleep 4
 done
-adb logcat -d -t 800 > "$SHOTS/logcat.log" 2>/dev/null || true
 save_dump home
 shot 01-home
-if [ "$LOADED" != "1" ]; then echo "WALK ABORTED: catalogue never loaded"; visible_texts; exit 0; fi
+if [ "$LOADED" != "1" ]; then echo "WALK ABORTED: catalogue never loaded"; visible_texts; exit 1; fi
 
 echo "== home, scrolled =="
 adb shell input swipe 540 1800 540 700 400
@@ -169,10 +173,10 @@ type "zzqq"
 shot 04b-empty-search
 tap_desc "Clear search"
 sleep 1
-if has_text "Kullu khokhor"; then echo "CLEAR OK - grid restored"; else echo "CLEAR MISS - grid not restored"; visible_texts; fi
+if has_text "Kullu Khokhor"; then echo "CLEAR OK - grid restored"; else echo "CLEAR MISS - grid not restored"; FAILED=1; visible_texts; fi
 
 echo "== open a product =="
-tap_text "Kullu khokhor" contains
+tap_text "Kullu Khokhor" contains
 sleep 3
 save_dump product
 shot 05-product
@@ -191,7 +195,7 @@ shot 06-favourited
 adb shell input keyevent 4; sleep 2
 save_dump backnav
 shot 06b-back-from-product
-tap_text "Kullu khokhor" contains
+tap_text "Kullu Khokhor" contains
 sleep 3
 
 echo "== book: first-booking details sheet =="
@@ -209,7 +213,7 @@ tap_field 2; type "Imphal%sTest%sAddress"
 adb shell input keyevent 4; sleep 2
 save_dump filled
 shot 08-details-filled
-if has_text "Your details"; then echo "sheet still open after filling - good"; else echo "SHEET CLOSED EARLY"; fi
+if has_text "Your details"; then echo "sheet still open after filling - good"; else echo "SHEET CLOSED EARLY"; FAILED=1; fi
 tap_text "Save & continue to WhatsApp"
 sleep 5
 shot 09-after-book-tap
@@ -243,7 +247,26 @@ adb shell am start -n $PKG/.MainActivity --es code AJ-710091
 sleep 5
 save_dump notif-tap
 shot 13-notif-tap-product
-if has_text "Book on WhatsApp"; then echo "NOTIF TAP OK - product page opened from the code extra"; else echo "NOTIF TAP MISS - product page not shown"; visible_texts; fi
+if has_text "Book on WhatsApp"; then echo "NOTIF TAP OK - product page opened from the code extra"; else echo "NOTIF TAP MISS - product page not shown"; FAILED=1; visible_texts; fi
 
+echo "== hidden-price piece: enquire flow (v1.13) =="
+# Back to the tabs from the notification product page, then search the
+# live hidden-price piece (AJ-095562 "Earing Kullu", price 0) and check
+# the piece shows "Price on request" with an "Enquire on WhatsApp" button.
+adb shell input keyevent 4; sleep 2
+tap_text "SHOP"
+sleep 2
+tap_field 0; type "Earing"
+hide_keyboard
+sleep 2
+tap_text "Earing Kullu" contains
+sleep 3
+shot 14-hidden-price
+if has_text "Price on request"; then echo "HIDDEN PRICE OK - Price on request shown"; else echo "HIDDEN PRICE MISS - no Price on request"; FAILED=1; visible_texts; fi
+if has_text "Enquire on WhatsApp"; then echo "ENQUIRE OK - Enquire on WhatsApp button shown"; else echo "ENQUIRE MISS - no Enquire button"; FAILED=1; visible_texts; fi
 echo "== walk done =="
 ls -la "$SHOTS"
+# Crash log captured at the END so it covers the whole walk, not just install.
+adb logcat -d -t 800 > "$SHOTS/logcat.log" 2>/dev/null || true
+ls -la "$SHOTS"
+if [ "$FAILED" = "1" ]; then echo "WALK FAILED: one or more steps did not find what they expected"; exit 1; fi
